@@ -66,7 +66,7 @@ def find_files(src, filelist=None, dirlist=None):
         dirlist: contains list of dirs
         All files and dirlist is recursive
     """
-    list_dir = os.lisdir(src)
+    list_dir = os.listdir(src)
     for f in list_dir:
         new_path = os.path.join(src, f)
         if os.path.isdir(new_path):
@@ -92,7 +92,7 @@ def find_sum_of_student(myfile, stname):
                     records[st_name] = st_marks
                 else:
                     records[st_name] += st_marks
-    except Error as e:
+    except Exception as e:
         print e
     return records[stname]
 
